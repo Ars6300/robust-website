@@ -1,0 +1,124 @@
+{
+  "categories": [
+    {
+      "id": "commercial-vehicles",
+      "name": "Commercial Vehicles",
+      "description": "Premium parts for trucks, buses, and commercial fleets",
+      "products": [
+        {
+          "id": "cv-001",
+          "name": "Heavy Duty Brake Pads",
+          "category": "Braking System",
+          "description": "High-performance brake pads designed for heavy commercial vehicles. Superior stopping power and extended lifespan.",
+          "price": "$89.99",
+          "image": "assets/images/products/brake-pads.jpg",
+          "specifications": {
+            "material": "Ceramic composite",
+            "weight": "2.5 kg",
+            "compatibility": "Volvo FH, Scania R-series, Mercedes Actros"
+          },
+          "inStock": true
+        },
+        {
+          "id": "cv-002",
+          "name": "Air Filter Assembly",
+          "category": "Filtration System",
+          "description": "Premium air filter for maximum engine protection. 99.9% filtration efficiency.",
+          "price": "$45.99",
+          "image": "assets/images/products/air-filter.jpg",
+          "specifications": {
+            "filterType": "High-efficiency particulate",
+            "dimensions": "12x8x6 inches",
+            "compatibility": "Universal fit for most commercial trucks"
+          },
+          "inStock": true
+        },
+        {
+          "id": "cv-003",
+          "name": "Fuel Pump Module",
+          "category": "Fuel System",
+          "description": "Reliable fuel pump module ensuring consistent fuel delivery under all conditions.",
+          "price": "$299.99",
+          "image": "assets/images/products/fuel-pump.jpg",
+          "specifications": {
+            "flowRate": "120 L/h",
+            "voltage": "24V",
+            "compatibility": "DAF XF, MAN TGX, Iveco Stralis"
+          },
+          "inStock": false
+        }
+      ]
+    },
+    {
+      "id": "off-highway",
+      "name": "Off-Highway Equipment",
+      "description": "Heavy-duty components for construction and mining",
+      "products": [
+        {
+          "id": "oh-001",
+          "name": "Hydraulic Cylinder",
+          "category": "Hydraulic System",
+          "description": "Industrial-grade hydraulic cylinder for excavators and loaders. Built for extreme conditions.",
+          "price": "$599.99",
+          "image": "assets/images/products/hydraulic-cylinder.jpg",
+          "specifications": {
+            "bore": "100mm",
+            "stroke": "500mm",
+            "pressure": "350 bar",
+            "compatibility": "Caterpillar, Komatsu, JCB"
+          },
+          "inStock": true
+        },
+        {
+          "id": "oh-002",
+          "name": "Track Link Assembly",
+          "category": "Undercarriage",
+          "description": "Durable track links for bulldozers and excavators. Heat-treated steel construction.",
+          "price": "$1,299.99",
+          "image": "assets/images/products/track-link.jpg",
+          "specifications": {
+            "material": "Alloy steel",
+            "weight": "45 kg",
+            "compatibility": "CAT D6, Komatsu D65"
+          },
+          "inStock": true
+        }
+      ]
+    },
+    {
+      "id": "passenger-cars",
+      "name": "Passenger Cars",
+      "description": "Quality replacement parts for passenger vehicles",
+      "products": [
+        {
+          "id": "pc-001",
+          "name": "Oxygen Sensor",
+          "category": "Engine Management",
+          "description": "High-precision oxygen sensor for optimal fuel efficiency and emissions control.",
+          "price": "$79.99",
+          "image": "assets/images/products/oxygen-sensor.jpg",
+          "specifications": {
+            "type": "Wideband",
+            "threads": "M18x1.5",
+            "compatibility": "Toyota, Honda, Ford, VW"
+          },
+          "inStock": true
+        },
+        {
+          "id": "pc-002",
+          "name": "Shock Absorber Set",
+          "category": "Suspension System",
+          "description": "Premium gas-charged shock absorbers for superior ride comfort and handling.",
+          "price": "$249.99",
+          "image": "assets/images/products/shock-absorber.jpg",
+          "specifications": {
+            "type": "Gas monotube",
+            "position": "Front pair",
+            "compatibility": "Most sedans and SUVs"
+          },
+          "inStock": true
+        }
+      ]
+    }
+  ]
+}

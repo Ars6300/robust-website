@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/robust-logo.png" type="image/x-icon">
+  <meta name="description" content="">
+
+  <title>Products - Robust</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/parallax/jarallax.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Epilogue:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Epilogue:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=iCVGD5">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=iCVGD5" type="text/css">
+
+  <style>
+    .product-card {
+      background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+      border-radius: 16px;
+      padding: 0;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
+      height: 100%;
+      overflow: hidden;
+      border: 1px solid #e8ecef;
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+      border-color: #007bff;
+    }
+    .product-image-container {
+      width: 100%;
+      height: 280px;
+      background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
+      overflow: hidden;
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      position: relative;
+    }
+    .product-image-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at center, rgba(0,123,255,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .product-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      object-position: center;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
+      transition: transform 0.4s ease;
+      position: relative;
+      z-index: 1;
+    }
+    .product-card:hover .product-image {
+      transform: scale(1.05);
+    }
+    .product-content {
+      padding: 25px;
+    }
+    .product-placeholder {
+      color: #999;
+      font-size: 14px;
+    }
+    .product-category-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(0,123,255,0.3);
+    }
+    .product-id {
+      font-size: 0.85rem;
+      color: #6c757d;
+      font-weight: 500;
+      margin-bottom: 8px;
+      font-family: 'Courier New', monospace;
+    }
+    .product-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 8px 0 12px 0;
+      color: #1a1a1a;
+      line-height: 1.3;
+    }
+    .product-description {
+      color: #555;
+      font-size: 0.95rem;
+      margin: 15px 0;
+      line-height: 1.7;
+      min-height: 60px;
+    }
+
+    .category-section {
+      margin: 80px 0;
+    }
+    .category-header {
+      margin-bottom: 50px;
+      text-align: center;
+      position: relative;
+      padding-bottom: 20px;
+    }
+    .category-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+      border-radius: 2px;
+    }
+    .category-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #1a1a1a;
+    }
+    .category-desc {
+      font-size: 1.15rem;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .specs-list {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+      border: 1px solid #e8ecef;
+    }
+    .specs-list dt {
+      font-weight: 600;
+      color: #2c2c2c;
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+    .specs-list dt:first-child {
+      margin-top: 0;
+    }
+    .specs-list dd {
+      color: #666;
+      margin-left: 0;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <section data-bs-version="5.1" class="menu menu1 cid-unc1y8qtdk" once="menu" id="menu1-c">
+    <nav class="navbar navbar-dropdown navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="index.html">
+                        <img src="assets/images/robust-logo.png" alt="Robust" style="height: 5.3rem;">
+                    </a>
+                </span>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  </section>
+
+  <section data-bs-version="5.1" class="header16 cid-umQ5Yr8qIA" id="header16-7">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2">
+                    <strong>Our Products</strong>
+                </h1>
+                <p class="mbr-text mbr-fonts-style display-7">
+                    Discover our comprehensive range of high-quality spare parts designed for commercial vehicles, off-highway equipment, and passenger cars.
+                </p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section data-bs-version="5.1" class="features3 cid-sFGGDvi61Z" id="features3-products">
+    <div class="container">
+      <div id="products-container">
+        <div class="text-center">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <p class="mt-3">Loading products...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-bs-version="5.1" class="footer1 cid-sFGDg6hy8z" once="footers" id="footer1-7">
+    <div class="container">
+        <div class="row mbr-white">
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
+                    <strong>Links</strong>
+                </h5>
+                <ul class="list mbr-fonts-style display-4">
+                    <li class="mbr-text item-wrap"><a href="index.html" style="text-decoration:none;color:inherit;">Home</a></li>
+                    <li class="mbr-text item-wrap"><a href="products.html" style="text-decoration:none;color:inherit;">Products</a></li>
+                    <li class="mbr-text item-wrap"><a href="contact.html" style="text-decoration:none;color:inherit;">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"></h5>
+                <ul class="list mbr-fonts-style display-4">
+                    <li class="mbr-text item-wrap"><br></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"></h5>
+                <ul class="list mbr-fonts-style display-4">
+
+                    <li class="mbr-text item-wrap"><br></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
+                    <strong>About</strong>
+                </h5>
+                <p class="mbr-text mbr-fonts-style mb-4 display-4">
+                    Robust is a global brand of high-quality truck parts. Manufactured across top-tier facilities worldwide, Robust delivers reliability, performance, and durability for heavy-duty vehicles.<br>
+                </p>
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-7">
+                    <strong>Social</strong>
+                </h5>
+                <div class="social-row display-7">
+                    <div class="soc-item">
+                        <span class="mbr-iconfont socicon-facebook socicon"></span>
+                    </div>
+                    <div class="soc-item">
+                        <span class="mbr-iconfont socicon-twitter socicon"></span>
+                    </div>
+                    <div class="soc-item">
+                        <span class="mbr-iconfont socicon-instagram socicon"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/parallax/jarallax.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/ytplayer/index.js"></script>
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+
+  <div id="scrollToTop" class="scrollToTop mbr-arrow-up">
+    <a style="text-align: center;">
+      <i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i>
+    </a>
+  </div>
+
+  <script>
+    const productsData = {
+      "categories": [
+        {
+          "id": "commercial-vehicles",
+          "name": "Commercial Vehicles",
+          "description": "Premium parts for trucks, buses, and commercial fleets",
+          "products": [
+            {
+              "id": "RB0273317",
+              "name": "Cabin shock absorber",
+              "category": "Cab Suspension",
+              "description": "Reduces vibrations and smooths cab movement",
+              "image": "assets/images/photo_2025-11-15_17-53-50.jpg",
+              "specifications": {
+                "Material": "Ceramic composite",
+                "Weight": "3,6 kg",
+                "Compatibility": "DAF XF"
+              }
+            },
+            {
+              "id": "RB010152",
+              "name": "Condensate drain valve",
+              "category": "HVAC Components",
+              "description": "A valve that automatically releases collected condensate from HVAC systems to prevent overflow",
+              "image": "assets/images/photo_2025-11-17_16-24-03.jpg",
+              "specifications": {
+                "Material": "PVC or corrosion-resistant plastic",
+                "Type": "One-way automatic drain valve",
+                "Connection size": "1/2–3/4 standard HVAC drain line"
+              }
+            },
+            {
+              "id": "RB32568",
+              "name": "Caliper adjusting shaft",
+              "category": "Brake System Components",
+              "description": "A shaft inside the brake caliper that adjusts pad position for proper braking.",
+              "image": "assets/images/removed.jpeg",
+              "specifications": {
+                "Material": "Hardened steel",
+                "Function": "Adjusts brake pad clearance",
+                "Compatibility": "Fits disc brake caliper adjuster mechanism"
+              }
+            },
+            {
+              "id": "RB010163",
+              "name": "Straight emergency connector",
+              "category": "Connectors",
+              "description": "Straight air-line coupling used to quickly connect or bypass brake/air system lines in emergency situations",
+              "image": "assets/images/photo_2025-11-15_22-40-29.jpg",
+              "specifications": {
+                "Length": "12–20 inches",
+                "Max working pressure": "125 PSI",
+                "Compatibility": "Most commercial truck models"
+              }
+            },
+            {
+              "id": "RB497L",
+              "name": "Air filter",
+              "category": "Filters",
+              "description": "Removes dust and debris from the air before it enters the engine.",
+              "image": "assets/images/photo_2025-11-17_16-36-08.jpg",
+              "specifications": {
+                "Service life": "Designed for 15,000–30,000 km or equivalent operating hours",
+                "Seal material": "Rubber or polyurethane gasket",
+                "Compatibility": "Volvo FH/FM, Scania P/G/R series"
+              }
+            },
+            {
+              "id": "RB010291",
+              "name": "Brake shoe disc",
+              "category": "Brake System Components",
+              "description": "Curved metal piece with friction material on one side",
+              "image": "assets/images/wmremove-transformed.jpeg",
+              "specifications": {
+                "Material": "Steel backing plate + friction lining",
+                "Dimensions": "Diameter (e.g., 180–300 mm)",
+                "Maximum Operating Temperature": "~250–350°C"
+              }
+            }
+          ]
+        }
+      ]
+    };
+
+    function displayProducts(categories) {
+      const container = document.getElementById('products-container');
+      let html = '';
+
+      categories.forEach(category => {
+        html += `
+          <div class="category-section">
+            <div class="category-header">
+              <h2 class="category-title"><strong>${category.name}</strong></h2>
+              <p class="category-desc">${category.description}</p>
+            </div>
+            <div class="row">
+        `;
+
+        category.products.forEach(product => {
+          let specsHtml = '<dl class="specs-list">';
+          for (const [key, value] of Object.entries(product.specifications)) {
+            specsHtml += `<dt>${key}:</dt><dd>${value}</dd>`;
+          }
+          specsHtml += '</dl>';
+
+          html += `
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="product-card">
+                <div class="product-image-container">
+                  ${product.image ?
+                    `<img src="${product.image}" alt="${product.name}" class="product-image">` :
+                    `<div class="product-placeholder">Product Image</div>`
+                  }
+                </div>
+                <div class="product-content">
+                  <span class="product-category-badge">${product.category}</span>
+                  <div class="product-id">Product ID: ${product.id}</div>
+                  <h3 class="product-title">${product.name}</h3>
+                  <p class="product-description">${product.description}</p>
+                  ${specsHtml}
+                </div>
+              </div>
+            </div>
+          `;
+        });
+
+        html += `
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    // Load products when page loads
+    window.addEventListener('DOMContentLoaded', function() {
+      displayProducts(productsData.categories);
+    });
+  </script>
+</body>
+</html>
