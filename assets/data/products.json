@@ -1,15 +1,15 @@
 {
  "generated": "2026-08-10",
- "total": 170,
+ "total": 182,
  "categories": [
   {
    "id": "brakes",
    "name": "Brake System",
-   "count": 79,
+   "count": 83,
    "subs": [
     {
      "name": "Brake Discs",
-     "count": 11
+     "count": 13
     },
     {
      "name": "Brake Pads",
@@ -17,7 +17,7 @@
     },
     {
      "name": "Brake Chambers & Spring Brakes",
-     "count": 4
+     "count": 6
     },
     {
      "name": "Caliper Repair Kits",
@@ -71,11 +71,11 @@
   {
    "id": "suspension",
    "name": "Suspension & Steering",
-   "count": 29,
+   "count": 32,
    "subs": [
     {
      "name": "Suspension Shock Absorbers",
-     "count": 27
+     "count": 30
     },
     {
      "name": "Bushings & Mounts",
@@ -97,11 +97,11 @@
   {
    "id": "air",
    "name": "Air System",
-   "count": 2,
+   "count": 9,
    "subs": [
     {
      "name": "Valves",
-     "count": 2
+     "count": 9
     }
    ]
   },
@@ -115,24 +115,53 @@
      "count": 1
     }
    ]
-  },
-  {
-   "id": "accessories",
-   "name": "Accessories",
-   "count": 2,
-   "subs": [
-    {
-     "name": "Cargo Straps",
-     "count": 1
-    },
-    {
-     "name": "Safety",
-     "count": 1
-    }
-   ]
   }
  ],
  "products": [
+  {
+   "code": "RB54248DF",
+   "name": "Brake Disc — (for wedges) DAF CF65,75,85, XF95 (with mounting kit)",
+   "type": "Brake Disc",
+   "fitment": "(for wedges) DAF CF65,75,85, XF95 (with mounting kit)",
+   "nameRu": "Диск тормозной (под клинья) DAF CF65,75,85, XF95 (с монтажным к-том)",
+   "category": "brakes",
+   "categoryName": "Brake System",
+   "sub": "Brake Discs",
+   "brands": [
+    "DAF"
+   ],
+   "blurb": "Machined for even heat distribution and low run-out, giving stable pedal feel and predictable pad wear.",
+   "crosses": [
+    "FT203DF",
+    "FO0176PRO",
+    "ED06002",
+    "5.21221",
+    "EAP5424",
+    "NP1101",
+    "1726138",
+    "1739542",
+    "1783346",
+    "1812563",
+    "1812582",
+    "1387439",
+    "1542600",
+    "1640561",
+    "1691889S",
+    "31118",
+    "55855",
+    "BCR225A",
+    "215.150",
+    "215.151",
+    "II39541F",
+    "K034249K50",
+    "K034248K50",
+    "Z0009911",
+    "120118",
+    "0"
+   ],
+   "crossCount": 26,
+   "image": "assets/products/rb54248df.webp"
+  },
   {
    "code": "RB54262MN",
    "name": "Brake Disc — MAN F2000/L2000/M2000/TGA/TGM/TGS/TGX Ø432*45*135 mm 10 holes",
@@ -246,6 +275,48 @@
    ],
    "crossCount": 17,
    "image": "assets/products/rb65214mb.webp"
+  },
+  {
+   "code": "RB36781VO",
+   "name": "Brake Disc — Renault DXI, Volvo EURO-3, 430 mm (vented)",
+   "type": "Brake Disc",
+   "fitment": "Renault DXI, Volvo EURO-3, 430 mm (vented)",
+   "nameRu": "Диск тормозной RENAULT DXI, VOLVO EURO-3, 430 мм (вентилированный)",
+   "category": "brakes",
+   "categoryName": "Brake System",
+   "sub": "Brake Discs",
+   "brands": [
+    "Volvo",
+    "Renault"
+   ],
+   "blurb": "Machined for even heat distribution and low run-out, giving stable pedal feel and predictable pad wear.",
+   "crosses": [
+    "FT205VO",
+    "85103803",
+    "20515093",
+    "85110496",
+    "21575071",
+    "21224263",
+    "NP-1401",
+    "31068",
+    "BCR259A",
+    "215.088",
+    "215.176",
+    "CVD646",
+    "2.40550",
+    "ED11005",
+    "960456",
+    "104671",
+    "FCR249A",
+    "FO0362PRO",
+    "02-07-VO-058-HT",
+    "5001864498",
+    "7421575117",
+    "20428193",
+    "ED11001"
+   ],
+   "crossCount": 23,
+   "image": "assets/products/rb36781vo.webp"
   },
   {
    "code": "RB64398SF",
@@ -903,6 +974,84 @@
    ],
    "crossCount": 13,
    "image": "assets/products/rb275700.webp"
+  },
+  {
+   "code": "RB275699",
+   "name": "Spring Brake Actuator — type 24/24 DAF, Mercedes, RVI, Volvo",
+   "type": "Spring Brake Actuator",
+   "fitment": "type 24/24 DAF, Mercedes, RVI, Volvo",
+   "nameRu": "Энергоаккумулятор тип 24/24 DAF, MERCEDES, RVI, VOLVO",
+   "category": "brakes",
+   "categoryName": "Brake System",
+   "sub": "Brake Chambers & Spring Brakes",
+   "brands": [
+    "DAF",
+    "Volvo",
+    "Mercedes-Benz",
+    "Renault"
+   ],
+   "blurb": "Converts air pressure into clamping force and holds the vehicle on the parking circuit when air is released.",
+   "crosses": [
+    "FR522348",
+    "9254811500",
+    "RL3530CA53",
+    "1686001",
+    "1360929",
+    "21146",
+    "5.70303",
+    "2.40615",
+    "BS9502",
+    "20522028",
+    "20522029",
+    "7420522028",
+    "A9254811500",
+    "9254810510",
+    "9254610300",
+    "076.816-00",
+    "2159622",
+    "RD 01.92.54",
+    "A0204203018",
+    "3530015A4A"
+   ],
+   "crossCount": 20,
+   "image": "assets/products/rb275699.webp"
+  },
+  {
+   "code": "RB275698",
+   "name": "Spring Brake Actuator — type 24/30 BPW, DAF, Renault, Schmitz (with clevis)",
+   "type": "Spring Brake Actuator",
+   "fitment": "type 24/30 BPW, DAF, Renault, Schmitz (with clevis)",
+   "nameRu": "Энергоаккумулятор тип 24/30 BPW, DAF, RENAULT, SCHMITZ (с вилкой)",
+   "category": "brakes",
+   "categoryName": "Brake System",
+   "sub": "Brake Chambers & Spring Brakes",
+   "brands": [
+    "DAF",
+    "BPW",
+    "Schmitz",
+    "Renault"
+   ],
+   "blurb": "Converts air pressure into clamping force and holds the vehicle on the parking circuit when air is released.",
+   "crosses": [
+    "FR522347",
+    "052137",
+    "136587",
+    "EAP5812",
+    "BX7523",
+    "SD93001S",
+    "07643200A",
+    "076.432-00A",
+    "076.432-00",
+    "07643200",
+    "S2801241",
+    "021207117320",
+    "K031739N00",
+    "BX7515",
+    "35301202030",
+    "9253761120"
+   ],
+   "crossCount": 16,
+   "image": "assets/products/rb275698.webp"
   },
   {
    "code": "RB03772",
@@ -3347,6 +3496,37 @@
    "image": "assets/products/rb0273288.webp"
   },
   {
+   "code": "RB0273297",
+   "name": "Suspension Shock Absorber — BPW (767-467) 24x55 24x55",
+   "type": "Suspension Shock Absorber",
+   "fitment": "BPW (767-467) 24x55 24x55",
+   "nameRu": "Амортизатор подвески BPW (767-467) 24x55 24x55",
+   "category": "suspension",
+   "categoryName": "Suspension & Steering",
+   "sub": "Suspension Shock Absorbers",
+   "brands": [
+    "BPW"
+   ],
+   "blurb": "Damps axle movement to keep tyres loaded on the road surface, shortening braking distance and reducing frame fatigue.",
+   "crosses": [
+    "EAP5627",
+    "F5002",
+    "170183",
+    "0237026700",
+    "0237021800",
+    "30000216",
+    "2376001900",
+    "014050",
+    "1006613",
+    "20208",
+    "10.17201",
+    "20324",
+    "40006"
+   ],
+   "crossCount": 13,
+   "image": "assets/products/rb0273297.webp"
+  },
+  {
    "code": "RB0273298",
    "name": "Suspension Shock Absorber — BPW (L427-694) 24X55",
    "type": "Suspension Shock Absorber",
@@ -3428,6 +3608,42 @@
    ],
    "crossCount": 17,
    "image": "assets/products/rb0273296.webp"
+  },
+  {
+   "code": "RB0293304",
+   "name": "Suspension Shock Absorber — BPW, SAF (328-497 0/0 24X24)",
+   "type": "Suspension Shock Absorber",
+   "fitment": "BPW, SAF (328-497 0/0 24X24)",
+   "nameRu": "Амортизатор подвески BPW, SAF (328-497 0/0 24X24)",
+   "category": "suspension",
+   "categoryName": "Suspension & Steering",
+   "sub": "Suspension Shock Absorbers",
+   "brands": [
+    "BPW",
+    "SAF"
+   ],
+   "blurb": "Damps axle movement to keep tyres loaded on the road surface, shortening braking distance and reducing frame fatigue.",
+   "crosses": [
+    "9597SEM",
+    "990157",
+    "900260",
+    "FR560876",
+    "01828",
+    "02.3722.83.00",
+    "1041843",
+    "20205",
+    "F5004",
+    "F5224",
+    "F5073",
+    "11454",
+    "312 561",
+    "0237228302",
+    "312561",
+    "070225",
+    "JHR5001"
+   ],
+   "crossCount": 17,
+   "image": "assets/products/rb0293304.webp"
   },
   {
    "code": "RB0273300",
@@ -3663,6 +3879,33 @@
    ],
    "crossCount": 20,
    "image": "assets/products/rb0273302.webp"
+  },
+  {
+   "code": "RB0293305",
+   "name": "Suspension Shock Absorber — Front MAN TGX/TGS/TGA 2007",
+   "type": "Suspension Shock Absorber",
+   "fitment": "Front MAN TGX/TGS/TGA 2007",
+   "nameRu": "Амортизатор подвески передний MAN TGX/TGS/TGA 2007",
+   "category": "suspension",
+   "categoryName": "Suspension & Steering",
+   "sub": "Suspension Shock Absorbers",
+   "brands": [
+    "MAN"
+   ],
+   "blurb": "Damps axle movement to keep tyres loaded on the road surface, shortening braking distance and reducing frame fatigue.",
+   "crosses": [
+    "316502",
+    "T1358",
+    "3.66648",
+    "20602",
+    "81437026075",
+    "81437026032",
+    "81437026028",
+    "81437026060",
+    "20629"
+   ],
+   "crossCount": 9,
+   "image": "assets/products/rb0293305.webp"
   },
   {
    "code": "RB0273290",
@@ -4634,6 +4877,77 @@
    "image": "assets/products/rb0273324.webp"
   },
   {
+   "code": "RB05632",
+   "name": "Air Dryer Base with Governor — 24V M22×1,5/M12×1,5 with pressure governor",
+   "type": "Air Dryer Base with Governor",
+   "fitment": "24V M22×1,5/M12×1,5 with pressure governor",
+   "nameRu": "Основание осушителя воздуха 24V M22×1,5/M12×1,5 с регулятором давления",
+   "category": "air",
+   "categoryName": "Air System",
+   "sub": "Valves",
+   "brands": [],
+   "blurb": "Controls and speeds air flow through the brake circuit for fast, even response at every wheel.",
+   "crosses": [
+    "4324106002",
+    "4324106002-24V",
+    "3874100402",
+    "91.8699.000",
+    "RT10-38",
+    "FA3008A",
+    "FA3008B",
+    "MRC-R0018",
+    "AH1027"
+   ],
+   "crossCount": 9,
+   "image": "assets/products/rb05632.webp"
+  },
+  {
+   "code": "RB27854",
+   "name": "Air System Overflow Valve — DAF/MAN/Mercedes-Benz/Iveco/Volvo/Renault",
+   "type": "Air System Overflow Valve",
+   "fitment": "DAF/MAN/Mercedes-Benz/Iveco/Volvo/Renault",
+   "nameRu": "Клапан перепускной пневматической системы DAF/MAN/MERCEDES-BENZ/IVECO/VOLVO/RENAULT",
+   "category": "air",
+   "categoryName": "Air System",
+   "sub": "Valves",
+   "brands": [
+    "MAN",
+    "DAF",
+    "Volvo",
+    "Iveco",
+    "Mercedes-Benz",
+    "Renault"
+   ],
+   "blurb": "Controls and speeds air flow through the brake circuit for fast, even response at every wheel.",
+   "crosses": [
+    "4341001240",
+    "0004296344",
+    "0004315406",
+    "0014293744",
+    "0014295244",
+    "0014297644",
+    "0014297944",
+    "0014299844",
+    "0034290244",
+    "6634290244",
+    "81521106006",
+    "81521106021",
+    "81521106061",
+    "99000362231",
+    "500005828",
+    "61577723",
+    "5021170102",
+    "502922508",
+    "200297",
+    "VFA1150001",
+    "1505992",
+    "118839023B",
+    "2206136"
+   ],
+   "crossCount": 23,
+   "image": "assets/products/rb27854.webp"
+  },
+  {
    "code": "23.01.5003",
    "name": "Brake Relay Valve — MAN/Mercedes-Benz/DAF/Scania",
    "type": "Brake Relay Valve",
@@ -4671,6 +4985,76 @@
    ],
    "crossCount": 18,
    "image": "assets/products/23-01-5003.webp"
+  },
+  {
+   "code": "RB01432",
+   "name": "Pressure Limiting Valve — 5,9 bar M22×1,5 Volvo FH/FH12/FH16",
+   "type": "Pressure Limiting Valve",
+   "fitment": "5,9 bar M22×1,5 Volvo FH/FH12/FH16",
+   "nameRu": "Клапан ограничения давления 5,9 bar M22×1,5 VOLVO FH/FH12/FH16",
+   "category": "air",
+   "categoryName": "Air System",
+   "sub": "Valves",
+   "brands": [
+    "Volvo",
+    "DAF"
+   ],
+   "blurb": "Controls and speeds air flow through the brake circuit for fast, even response at every wheel.",
+   "crosses": [
+    "0481009026",
+    "0.481.009.026",
+    "0481009027",
+    "1587070",
+    "1587071",
+    "1606720",
+    "2.46006",
+    "246006",
+    "10.5310.90",
+    "10531090",
+    "106036",
+    "2323111",
+    "48328",
+    "85-19537-SX",
+    "TF21014009",
+    "WG1442830",
+    "TT1502019",
+    "1762299"
+   ],
+   "crossCount": 18,
+   "image": "assets/products/rb01432.webp"
+  },
+  {
+   "code": "RB08724",
+   "name": "Pressure Limiting Valve — 7,5 bar M16×1,5 DAF/Iveco/Scania",
+   "type": "Pressure Limiting Valve",
+   "fitment": "7,5 bar M16×1,5 DAF/Iveco/Scania",
+   "nameRu": "Клапан ограничения давления 7,5 bar M16×1,5 DAF/IVECO/SCANIA",
+   "category": "air",
+   "categoryName": "Air System",
+   "sub": "Valves",
+   "brands": [
+    "DAF",
+    "Scania",
+    "Iveco"
+   ],
+   "blurb": "Controls and speeds air flow through the brake circuit for fast, even response at every wheel.",
+   "crosses": [
+    "4750150310",
+    "475.015.031.0",
+    "1505096",
+    "04780200",
+    "4780200",
+    "4780201",
+    "4780202",
+    "5004780200",
+    "101740",
+    "2090288",
+    "20199000623",
+    "AC156A",
+    "2223218"
+   ],
+   "crossCount": 13,
+   "image": "assets/products/rb08724.webp"
   },
   {
    "code": "RB73921",
@@ -4712,6 +5096,125 @@
    "image": "assets/products/rb73921.webp"
   },
   {
+   "code": "RB67012",
+   "name": "Relay Valve — M16X1.5/M22X15 mm P-10 bar DAF, Iveco, Scania, Renault, Mercedes, Volvo",
+   "type": "Relay Valve",
+   "fitment": "M16X1.5/M22X15 mm P-10 bar DAF, Iveco, Scania, Renault, Mercedes, Volvo",
+   "nameRu": "Клапан ускорительный M16x1.5/M22x15 мм P-10 Bar DAF, IVECO, SCANIA, RENAULT, MERCEDES, VOLVO",
+   "category": "air",
+   "categoryName": "Air System",
+   "sub": "Valves",
+   "brands": [
+    "DAF",
+    "Volvo",
+    "Scania",
+    "Iveco",
+    "Mercedes-Benz",
+    "Renault"
+   ],
+   "blurb": "Controls and speeds air flow through the brake circuit for fast, even response at every wheel.",
+   "crosses": [
+    "2226600",
+    "9730110000",
+    "9730110007",
+    "3173150",
+    "1519331",
+    "0689331",
+    "689331",
+    "1082666",
+    "3162118",
+    "42125234",
+    "MZK4110",
+    "5000012541",
+    "82855140000",
+    "2.47002",
+    "38118",
+    "193004",
+    "AC574AXY",
+    "303.01.0001",
+    "12.01.002",
+    "094.133",
+    "096.292",
+    "PRO0110040"
+   ],
+   "crossCount": 22,
+   "image": "assets/products/rb67012.webp"
+  },
+  {
+   "code": "RB49367",
+   "name": "Ride Height Control Valve — Renault /Scania/Volvo",
+   "type": "Ride Height Control Valve",
+   "fitment": "Renault /Scania/Volvo",
+   "nameRu": "Клапан уровня пола пневматической подвески RENAULT /SCANIA/VOLVO",
+   "category": "air",
+   "categoryName": "Air System",
+   "sub": "Valves",
+   "brands": [
+    "Volvo",
+    "Scania",
+    "Renault"
+   ],
+   "blurb": "Controls and speeds air flow through the brake circuit for fast, even response at every wheel.",
+   "crosses": [
+    "4640060020",
+    "4640060027",
+    "5010260213",
+    "4425010400",
+    "339792",
+    "2TB412600A",
+    "8030222",
+    "4853325",
+    "04853325",
+    "81436106135",
+    "81436106116",
+    "81436106117",
+    "65.02.102"
+   ],
+   "crossCount": 13,
+   "image": "assets/products/rb49367.webp"
+  },
+  {
+   "code": "RB47632",
+   "name": "Trailer Control Valve, Emergency — trailers and semi-trailers",
+   "type": "Trailer Control Valve, Emergency",
+   "fitment": "trailers and semi-trailers",
+   "nameRu": "Клапан управления тормозами прицепа аварийный прицепы и полуприцепы",
+   "category": "air",
+   "categoryName": "Air System",
+   "sub": "Valves",
+   "brands": [],
+   "blurb": "Controls and speeds air flow through the brake circuit for fast, even response at every wheel.",
+   "crosses": [
+    "9710021500",
+    "9710021507",
+    "02.431.07.70.0",
+    "0243107700",
+    "0830550",
+    "830550",
+    "1506643",
+    "4611925",
+    "AJU7602",
+    "CF351054",
+    "H031402-01",
+    "2480005",
+    "AC556AK",
+    "82580000060",
+    "07110.000",
+    "AG46729002",
+    "0579009",
+    "579009",
+    "1738443",
+    "5021170441",
+    "N2523019016",
+    "WA9710021507",
+    "2226301",
+    "16.02.10.003",
+    "TT1610003"
+   ],
+   "crossCount": 25,
+   "image": "assets/products/rb47632.webp"
+  },
+  {
    "code": "RB123957",
    "name": "Fifth Wheel King Pin — (without bolts) 2\"/10 bolt-on top, 8 holes",
    "type": "Fifth Wheel King Pin",
@@ -4735,43 +5238,6 @@
    ],
    "crossCount": 9,
    "image": "assets/products/rb123957.webp"
-  },
-  {
-   "code": "RS5803",
-   "name": "Cargo Ratchet Strap — 10 m/5 t 50 mm (plastic handle)",
-   "type": "Cargo Ratchet Strap",
-   "fitment": "10 m/5 t 50 mm (plastic handle)",
-   "nameRu": "Стяжка груза 10метров/5тонн 50мм. (пластиковая ручка)",
-   "category": "accessories",
-   "categoryName": "Accessories",
-   "sub": "Cargo Straps",
-   "brands": [],
-   "blurb": "Rated ratchet strap for securing loads to the deck.",
-   "crosses": [
-    "EAP5803",
-    "CTB10MT",
-    "5T10MLC2500"
-   ],
-   "crossCount": 3,
-   "image": "assets/products/rs5803.webp"
-  },
-  {
-   "code": "RB364231",
-   "name": "Work Gloves — cotton with PVC grip black",
-   "type": "Work Gloves",
-   "fitment": "cotton with PVC grip black",
-   "nameRu": "Перчатки рабочие Х/Б с пвх черные",
-   "category": "accessories",
-   "categoryName": "Accessories",
-   "sub": "Safety",
-   "brands": [],
-   "blurb": "Cotton glove with a PVC dotted grip for workshop and yard handling.",
-   "crosses": [
-    "ST-PR3",
-    "RW-00310"
-   ],
-   "crossCount": 2,
-   "image": "assets/products/rb364231.webp"
   }
  ]
 }
