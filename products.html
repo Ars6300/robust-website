@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/robust-logo.png" type="image/x-icon">
-  <meta name="description" content="">
-  
+  <meta name="description" content="Robust auto parts catalogue — air, cabin, fuel and oil filters, brake discs and pads, shock absorbers, air line fittings and valves for MAN, Mercedes-Benz, Volvo, DAF, Scania, Iveco, BPW and SAF.">
+
   <title>Products - Robust</title>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
@@ -18,170 +18,442 @@
   <link rel="stylesheet" href="assets/dropdown/css/style.css">
   <link rel="stylesheet" href="assets/socicon/css/styles.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Epilogue:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Epilogue:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Epilogue:100,200,300,400,500,600,700,800,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Epilogue:100,200,300,400,500,600,700,800,900&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=iCVGD5">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=iCVGD5" type="text/css">
 
   <style>
-    .product-card {
-      background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
-      border-radius: 16px;
-      padding: 0;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      transition: all 0.4s ease;
-      height: 100%;
-      overflow: hidden;
-      border: 1px solid #e8ecef;
+    :root {
+      --rb-red: #e31e24;
+      --rb-red-dark: #b91419;
+      --rb-ink: #2b2a29;
+      --rb-line: #e3e5e8;
+      --rb-muted: #6f7378;
+      --rb-bg: #f4f5f7;
     }
-    .product-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-      border-color: #007bff;
+
+    .cat-wrap {
+      background: var(--rb-bg);
+      padding: 0 0 5rem;
+      font-family: 'Epilogue', sans-serif;
     }
-    .product-image-container {
+
+    .cat-hero {
+      background: var(--rb-ink);
+      color: #fff;
+      padding: 4.5rem 0 3rem;
+    }
+    .cat-hero h1 {
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      margin: 0 0 .6rem;
+      line-height: 1;
+    }
+    .cat-hero h1 em {
+      font-style: normal;
+      color: var(--rb-red);
+    }
+    .cat-hero p {
+      color: #b9bcc0;
+      max-width: 46rem;
+      font-size: 1.05rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 2.2rem;
+      flex-wrap: wrap;
+    }
+    .hero-stat b {
+      display: block;
+      font-size: 1.9rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .hero-stat span {
+      font-size: .74rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #8c9096;
+    }
+
+    .cat-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: #fff;
+      border-bottom: 1px solid var(--rb-line);
+      padding: .9rem 0;
+    }
+    .search-shell {
+      position: relative;
+      flex: 1 1 auto;
+    }
+    .search-shell input {
       width: 100%;
-      height: 280px;
-      background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
-      overflow: hidden;
-      margin-bottom: 0;
+      border: 1.5px solid var(--rb-line);
+      border-radius: 3px;
+      padding: .72rem 2.4rem .72rem 2.6rem;
+      font-size: .95rem;
+      font-family: inherit;
+      background: #fff;
+      transition: border-color .15s;
+    }
+    .search-shell input:focus {
+      outline: none;
+      border-color: var(--rb-red);
+    }
+    .search-shell .s-ico,
+    .search-shell .s-clear {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--rb-muted);
+    }
+    .search-shell .s-ico { left: .85rem; }
+    .search-shell .s-clear {
+      right: .6rem;
+      border: 0;
+      background: none;
+      font-size: 1.3rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0 .3rem;
+      display: none;
+    }
+    .result-note {
+      font-size: .85rem;
+      color: var(--rb-muted);
+      white-space: nowrap;
+    }
+    .result-note b { color: var(--rb-ink); }
+
+    .side-title {
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--rb-muted);
+      font-weight: 700;
+      margin: 0 0 .7rem;
+    }
+    .cat-list { list-style: none; margin: 0 0 1.8rem; padding: 0; }
+    .cat-list button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: .6rem;
+      width: 100%;
+      border: 0;
+      background: none;
+      text-align: left;
+      font-family: inherit;
+      font-size: .95rem;
+      font-weight: 600;
+      color: var(--rb-ink);
+      padding: .5rem .7rem;
+      border-left: 3px solid transparent;
+      cursor: pointer;
+      transition: background .12s, color .12s;
+    }
+    .cat-list button:hover { background: #eceef1; }
+    .cat-list button.on {
+      border-left-color: var(--rb-red);
+      color: var(--rb-red);
+      background: #fff;
+    }
+    .cat-list .n {
+      font-size: .78rem;
+      color: var(--rb-muted);
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+    .cat-list button.on .n { color: var(--rb-red); }
+    .sub-list { list-style: none; margin: .1rem 0 .5rem; padding: 0 0 0 .9rem; }
+    .sub-list button {
+      font-size: .875rem;
+      font-weight: 500;
+      color: #55595e;
+      padding: .34rem .7rem;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+      margin-bottom: 1.6rem;
+    }
+    .chip {
+      border: 1.5px solid var(--rb-line);
+      background: #fff;
+      border-radius: 999px;
+      padding: .34rem .95rem;
+      font-size: .84rem;
+      font-weight: 600;
+      font-family: inherit;
+      color: #4c5055;
+      cursor: pointer;
+      transition: all .13s;
+    }
+    .chip:hover { border-color: #b9bcc0; }
+    .chip.on {
+      background: var(--rb-ink);
+      border-color: var(--rb-ink);
+      color: #fff;
+    }
+
+    .p-card {
+      background: #fff;
+      border: 1px solid var(--rb-line);
+      border-radius: 4px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      position: relative;
+      transition: border-color .16s, box-shadow .16s, transform .16s;
+    }
+    .p-card::before {
+      content: "";
+      position: absolute;
+      inset: -1px -1px auto -1px;
+      height: 3px;
+      background: var(--rb-red);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .22s ease;
+    }
+    .p-card:hover {
+      border-color: #cfd3d8;
+      box-shadow: 0 10px 30px rgba(20, 22, 26, .10);
+      transform: translateY(-3px);
+    }
+    .p-card:hover::before { transform: scaleX(1); }
+
+    .p-img {
+      height: 200px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 30px;
-      position: relative;
+      padding: 1.1rem;
+      background: #fff;
+      border-bottom: 1px solid #f0f1f3;
     }
-    .product-image-container::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at center, rgba(0,123,255,0.05) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .product-image {
+    .p-img img {
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
-      object-position: center;
-      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
-      transition: transform 0.4s ease;
-      position: relative;
-      z-index: 1;
+      mix-blend-mode: multiply;
     }
-    .product-card:hover .product-image {
-      transform: scale(1.05);
+    .p-body {
+      padding: 1rem 1.1rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
     }
-    .product-content {
-      padding: 25px;
-    }
-    .product-placeholder {
-      color: #999;
-      font-size: 14px;
-    }
-    .product-category-badge {
-      display: inline-block;
-      background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-      color: white;
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 12px;
+    .p-eyebrow {
+      font-size: .67rem;
+      letter-spacing: .13em;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      box-shadow: 0 2px 8px rgba(0,123,255,0.3);
-    }
-    .product-id {
-      font-size: 0.85rem;
-      color: #6c757d;
-      font-weight: 500;
-      margin-bottom: 8px;
-      font-family: 'Courier New', monospace;
-    }
-    .product-title {
-      font-size: 1.5rem;
+      color: var(--rb-red);
       font-weight: 700;
-      margin: 8px 0 12px 0;
-      color: #1a1a1a;
-      line-height: 1.3;
+      margin-bottom: .4rem;
     }
-    .product-description {
-      color: #555;
-      font-size: 0.95rem;
-      margin: 15px 0;
-      line-height: 1.7;
-      min-height: 60px;
+    .p-type {
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: var(--rb-ink);
+      line-height: 1.25;
+      letter-spacing: -.01em;
+      margin: 0 0 .25rem;
+    }
+    .p-fit {
+      font-size: .855rem;
+      color: var(--rb-muted);
+      line-height: 1.45;
+      margin: 0 0 .85rem;
+    }
+    .p-foot {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .5rem;
+      padding-top: .75rem;
+      border-top: 1px solid #f0f1f3;
+    }
+    .p-code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--rb-ink);
+      background: #f2f3f5;
+      padding: .22rem .5rem;
+      border-radius: 3px;
+      letter-spacing: -.02em;
+    }
+    .p-cross {
+      font-size: .74rem;
+      color: var(--rb-muted);
+      font-weight: 600;
+      white-space: nowrap;
     }
 
-    .category-section {
-      margin: 80px 0;
-    }
-    .category-header {
-      margin-bottom: 50px;
+    .empty {
       text-align: center;
-      position: relative;
-      padding-bottom: 20px;
+      padding: 5rem 1rem;
+      color: var(--rb-muted);
     }
-    .category-header::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
-      border-radius: 2px;
-    }
-    .category-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #FF0000;
-    }
-    .category-desc {
+    .empty b {
+      display: block;
       font-size: 1.15rem;
-      color: #666;
-      max-width: 700px;
+      color: var(--rb-ink);
+      margin-bottom: .4rem;
+    }
+
+    .ov {
+      position: fixed;
+      inset: 0;
+      background: rgba(24, 26, 29, .62);
+      z-index: 1200;
+      display: none;
+      padding: 2rem 1rem;
+      overflow-y: auto;
+    }
+    .ov.open { display: block; }
+    .ov-box {
+      background: #fff;
+      max-width: 900px;
       margin: 0 auto;
+      border-radius: 5px;
+      position: relative;
     }
-    .specs-list {
-      background: #f8f9fa;
-      padding: 20px;
-      border-radius: 12px;
-      margin-top: 20px;
-      border: 1px solid #e8ecef;
+    .ov-close {
+      position: absolute;
+      top: .5rem;
+      right: .7rem;
+      border: 0;
+      background: none;
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--rb-muted);
+      cursor: pointer;
+      z-index: 2;
     }
-    .specs-list dt {
-      font-weight: 600;
-      color: #2c2c2c;
-      margin-top: 10px;
-      font-size: 0.9rem;
+    .ov-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
     }
-    .specs-list dt:first-child {
-      margin-top: 0;
+    .ov-img {
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      border-right: 1px solid var(--rb-line);
+      min-height: 320px;
     }
-    .specs-list dd {
-      color: #666;
-      margin-left: 0;
-      margin-bottom: 8px;
-      font-size: 0.9rem;
+    .ov-img img { max-width: 100%; max-height: 380px; object-fit: contain; mix-blend-mode: multiply; }
+    .ov-info { padding: 2.2rem 2rem 2rem; }
+    .ov-info h3 {
+      font-weight: 900;
+      font-size: 1.5rem;
+      letter-spacing: -.02em;
+      color: var(--rb-ink);
+      margin: .3rem 0 .3rem;
+      line-height: 1.2;
     }
-   #header16-7 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                      url('assets/images/scene-with-photorealistic-logistics-operations-proceedings-23.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 550px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 20px;
+    .ov-fit { color: var(--rb-muted); font-size: .95rem; margin-bottom: 1.2rem; }
+    .ov-blurb {
+      font-size: .92rem;
+      line-height: 1.65;
+      color: #4c5055;
+      border-left: 3px solid var(--rb-red);
+      padding-left: .9rem;
+      margin-bottom: 1.4rem;
+    }
+    .ov-row {
+      display: flex;
+      gap: .5rem;
+      align-items: baseline;
+      padding: .55rem 0;
+      border-top: 1px solid #f0f1f3;
+      font-size: .88rem;
+    }
+    .ov-row .k {
+      flex: 0 0 8.5rem;
+      color: var(--rb-muted);
+      font-size: .72rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .ov-row .v { color: var(--rb-ink); font-weight: 600; }
+    .ov-code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+    .cross-box {
+      margin-top: 1.3rem;
+      border-top: 1px solid #f0f1f3;
+      padding-top: 1rem;
+    }
+    .cross-box .side-title { margin-bottom: .55rem; }
+    .cross-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .32rem;
+      max-height: 9.5rem;
+      overflow-y: auto;
+    }
+    .cross-list span {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .76rem;
+      background: #f2f3f5;
+      border: 1px solid #e7e9ec;
+      border-radius: 3px;
+      padding: .16rem .42rem;
+      color: #4c5055;
+    }
+    .ov-cta {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: var(--rb-red);
+      color: #fff;
+      font-weight: 700;
+      font-size: .9rem;
+      padding: .7rem 1.6rem;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background .15s;
+    }
+    .ov-cta:hover { background: var(--rb-red-dark); color: #fff; }
+
+    .side-toggle { display: none; }
+
+    @media (max-width: 991px) {
+      .ov-grid { grid-template-columns: 1fr; }
+      .ov-img { border-right: 0; border-bottom: 1px solid var(--rb-line); min-height: 240px; }
+      .side-toggle {
+        display: block;
+        width: 100%;
+        border: 1.5px solid var(--rb-line);
+        background: #fff;
+        font-family: inherit;
+        font-weight: 700;
+        font-size: .9rem;
+        padding: .65rem 1rem;
+        border-radius: 3px;
+        margin-bottom: 1rem;
+        text-align: left;
+      }
+      .side-panel { display: none; }
+      .side-panel.open { display: block; }
     }
   </style>
 </head>
@@ -189,110 +461,123 @@
 
   <section data-bs-version="5.1" class="menu menu1 cid-unc1y8qtdk" once="menu" id="menu1-c">
     <nav class="navbar navbar-dropdown navbar-expand-lg">
-        <div class="container">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="index.html">
-                        <img src="assets/images/robust-logo.png" alt="Robust" style="height: 5.3rem;">
-                    </a>
-                </span>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-logo">
+            <a href="index.html">
+              <img src="assets/images/robust-logo.png" alt="Robust" style="height: 5.3rem;">
+            </a>
+          </span>
         </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+            <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </section>
 
-  <section data-bs-version="5.1" class="header16 cid-umQ5Yr8qIA" id="header16-7">
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2">
-                    <strong>Our Products</strong>
-                </h1>
-                <p class="mbr-text mbr-fonts-style display-7">
-                    Discover our comprehensive range of high-quality spare parts designed for commercial vehicles, off-highway equipment, and passenger cars.
-                </p>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <section data-bs-version="5.1" class="features3 cid-sFGGDvi61Z" id="features3-products">
+  <section class="cat-hero">
     <div class="container">
-      <div id="products-container">
-        <div class="text-center">
-          <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          <p class="mt-3">Loading products...</p>
-        </div>
+      <h1>Parts <em>Catalogue</em></h1>
+      <p>Filters, braking, suspension and pneumatics for European heavy trucks and trailers. Every reference below is a Robust part number with its full OEM cross list.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><b id="statTotal">—</b><span>Part numbers</span></div>
+        <div class="hero-stat"><b id="statCats">—</b><span>Categories</span></div>
+        <div class="hero-stat"><b id="statCross">—</b><span>OEM cross references</span></div>
       </div>
     </div>
   </section>
 
+  <div class="cat-toolbar">
+    <div class="container">
+      <div class="d-flex align-items-center gap-3">
+        <div class="search-shell">
+          <span class="s-ico mbr-iconfont mbrib-search"></span>
+          <input type="search" id="q" placeholder="Search by part name, Robust code or OEM number…" autocomplete="off">
+          <button class="s-clear" id="qClear" aria-label="Clear search">&times;</button>
+        </div>
+        <div class="result-note"><b id="shown">0</b> of <span id="total">0</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cat-wrap">
+    <div class="container pt-4">
+      <div class="row">
+        <div class="col-lg-3">
+          <button class="side-toggle" id="sideToggle">Browse categories</button>
+          <div class="side-panel" id="sidePanel">
+            <p class="side-title">Categories</p>
+            <ul class="cat-list" id="catList"></ul>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="chip-row" id="brandRow"></div>
+          <div class="row" id="grid"></div>
+          <div class="empty" id="empty" style="display:none">
+            <b>No parts match that search</b>
+            Try a Robust code such as RB438LS, an OEM number, or clear the filters.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ov" id="ov">
+    <div class="ov-box">
+      <button class="ov-close" id="ovClose" aria-label="Close">&times;</button>
+      <div class="ov-grid" id="ovBody"></div>
+    </div>
+  </div>
+
   <section data-bs-version="5.1" class="footer1 cid-sFGDg6hy8z" once="footers" id="footer1-7">
     <div class="container">
-        <div class="row mbr-white">
-            <div class="col-12 col-md-6 col-lg-3">
-                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
-                    <strong>Links</strong>
-                </h5>
-                <ul class="list mbr-fonts-style display-4">
-                    <li class="mbr-text item-wrap"><a href="index.html" style="text-decoration:none;color:inherit;">Home</a></li>
-                    <li class="mbr-text item-wrap"><a href="products.html" style="text-decoration:none;color:inherit;">Products</a></li>
-                    <li class="mbr-text item-wrap"><a href="contact.html" style="text-decoration:none;color:inherit;">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"></h5>
-                <ul class="list mbr-fonts-style display-4">
-                    <li class="mbr-text item-wrap"><br></li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"></h5>
-                <ul class="list mbr-fonts-style display-4">
-
-                    <li class="mbr-text item-wrap"><br></li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
-                    <strong>About</strong>
-                </h5>
-                <p class="mbr-text mbr-fonts-style mb-4 display-4">
-                    Robust is a global brand of high-quality truck parts. Manufactured across top-tier facilities worldwide, Robust delivers reliability, performance, and durability for heavy-duty vehicles.<br>
-                </p>
-                <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-7">
-                    <strong>Social</strong>
-                </h5>
-                <div class="social-row display-7">
-                    <div class="soc-item">
-                        <span class="mbr-iconfont socicon-facebook socicon"></span>
-                    </div>
-                    <div class="soc-item">
-                        <span class="mbr-iconfont socicon-twitter socicon"></span>
-                    </div>
-                    <div class="soc-item">
-                        <span class="mbr-iconfont socicon-instagram socicon"></span>
-                    </div>
-                </div>
-            </div>
+      <div class="row mbr-white">
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong>Links</strong></h5>
+          <ul class="list mbr-fonts-style display-4">
+            <li class="mbr-text item-wrap"><a href="index.html" style="text-decoration:none;color:inherit;">Home</a></li>
+            <li class="mbr-text item-wrap"><a href="products.html" style="text-decoration:none;color:inherit;">Products</a></li>
+            <li class="mbr-text item-wrap"><a href="contact.html" style="text-decoration:none;color:inherit;">Contact</a></li>
+          </ul>
         </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"></h5>
+          <ul class="list mbr-fonts-style display-4">
+            <li class="mbr-text item-wrap"><br></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"></h5>
+          <ul class="list mbr-fonts-style display-4">
+            <li class="mbr-text item-wrap"><br></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong>About</strong></h5>
+          <p class="mbr-text mbr-fonts-style mb-4 display-4">
+            Robust is a global brand of high-quality truck parts. Manufactured across top-tier facilities worldwide, Robust delivers reliability, performance, and durability for heavy-duty vehicles.<br>
+          </p>
+          <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-7"><strong>Social</strong></h5>
+          <div class="social-row display-7">
+            <div class="soc-item"><span class="mbr-iconfont socicon-facebook socicon"></span></div>
+            <div class="soc-item"><span class="mbr-iconfont socicon-twitter socicon"></span></div>
+            <div class="soc-item"><span class="mbr-iconfont socicon-instagram socicon"></span></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -310,154 +595,222 @@
   </div>
 
   <script>
-    const productsData = {
-      "categories": [
-        {
-          "id": "commercial-vehicles",
-          "name": "Commercial Vehicles",
-          "description": "Premium parts for trucks, buses, and commercial fleets",
-          "products": [
-            {
-              "id": "RB0273317",
-              "name": "Cabin shock absorber",
-              "category": "Cab Suspension",
-              "description": "Reduces vibrations and smooths cab movement",
-              "image": "assets/images/photo_2025-11-15_17-53-50.jpg",
-              "specifications": {
-                "Material": "Ceramic composite",
-                "Weight": "3,6 kg",
-                "Compatibility": "DAF XF"
-              }
-            },
-            {
-              "id": "RB010152",
-              "name": "Condensate drain valve",
-              "category": "HVAC Components",
-              "description": "A valve that automatically releases collected condensate from HVAC systems to prevent overflow",
-              "image": "assets/images/photo_2025-11-17_16-24-03.jpg",
-              "specifications": {
-                "Material": "PVC or corrosion-resistant plastic",
-                "Type": "One-way automatic drain valve",
-                "Connection size": "1/2–3/4 standard HVAC drain line"
-              }
-            },
-            {
-              "id": "RB32568",
-              "name": "Caliper adjusting shaft",
-              "category": "Brake System Components",
-              "description": "A shaft inside the brake caliper that adjusts pad position for proper braking.",
-              "image": "assets/images/removed.jpeg",
-              "specifications": {
-                "Material": "Hardened steel",
-                "Function": "Adjusts brake pad clearance",
-                "Compatibility": "Fits disc brake caliper adjuster mechanism"
-              }
-            },
-            {
-              "id": "RB010163",
-              "name": "Straight emergency connector",
-              "category": "Connectors",
-              "description": "Straight air-line coupling used to quickly connect or bypass brake/air system lines in emergency situations",
-              "image": "assets/images/photo_2025-11-15_22-40-29.jpg",
-              "specifications": {
-                "Length": "12–20 inches",
-                "Max working pressure": "125 PSI",
-                "Compatibility": "Most commercial truck models"
-              }
-            },
-            {
-              "id": "RB497L",
-              "name": "Air filter",
-              "category": "Filters",
-              "description": "Removes dust and debris from the air before it enters the engine.",
-              "image": "assets/images/photo_2025-11-17_16-36-08.jpg",
-              "specifications": {
-                "Service life": "Designed for 15,000–30,000 km or equivalent operating hours",
-                "Seal material": "Rubber or polyurethane gasket",
-                "Compatibility": "Volvo FH/FM, Scania P/G/R series"
-              }
-            },
-            {
-              "id": "RB010291",
-              "name": "Brake shoe disc",
-              "category": "Brake System Components",
-              "description": "Curved metal piece with friction material on one side",
-              "image": "assets/images/wmremove-transformed.jpeg",
-              "specifications": {
-                "Material": "Steel backing plate + friction lining",
-                "Dimensions": "Diameter (e.g., 180–300 mm)",
-                "Maximum Operating Temperature": "~250–350°C"
-              }
-            }
-          ]
-        }
-      ]
-    };
+    (function () {
+      var DATA = { products: [], categories: [] };
+      var state = { cat: 'all', sub: null, brand: null, q: '' };
 
-    function displayProducts(categories) {
-      const container = document.getElementById('products-container');
-      let html = '';
+      var el = {
+        grid: document.getElementById('grid'),
+        empty: document.getElementById('empty'),
+        catList: document.getElementById('catList'),
+        brandRow: document.getElementById('brandRow'),
+        q: document.getElementById('q'),
+        qClear: document.getElementById('qClear'),
+        shown: document.getElementById('shown'),
+        total: document.getElementById('total'),
+        ov: document.getElementById('ov'),
+        ovBody: document.getElementById('ovBody'),
+        ovClose: document.getElementById('ovClose'),
+        sidePanel: document.getElementById('sidePanel'),
+        sideToggle: document.getElementById('sideToggle')
+      };
 
-      categories.forEach(category => {
-        html += `
-          <div class="category-section">
-            <div class="category-header">
-              <h2 class="category-title"><strong>${category.name}</strong></h2>
-              <p class="category-desc">${category.description}</p>
-            </div>
-            <div class="row">
-        `;
-
-        category.products.forEach(product => {
-          let specsHtml = '<dl class="specs-list">';
-          for (const [key, value] of Object.entries(product.specifications)) {
-            specsHtml += `<dt>${key}:</dt><dd>${value}</dd>`;
-          }
-          specsHtml += '</dl>';
-
-          html += `
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="product-card">
-                <div class="product-image-container">
-                  ${product.image ?
-                    `<img src="${product.image}" alt="${product.name}" class="product-image">` :
-                    `<div class="product-placeholder">Product Image</div>`
-                  }
-                </div>
-                <div class="product-content">
-                  <span class="product-category-badge">${product.category}</span>
-                  <div class="product-id">Product ID: ${product.id}</div>
-                  <h3 class="product-title">${product.name}</h3>
-                  <p class="product-description">${product.description}</p>
-                  ${specsHtml}
-                </div>
-              </div>
-            </div>
-          `;
+      function esc(s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
         });
+      }
 
-        html += `
-            </div>
-          </div>
-        `;
+      function norm(s) {
+        return String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+      }
+
+      function haystack(p) {
+        if (!p._hay) {
+          p._hay = norm(p.code + p.name + p.nameRu + p.sub + p.brands.join('') + p.crosses.join(''));
+          p._words = (p.name + ' ' + p.sub + ' ' + p.brands.join(' ')).toUpperCase();
+        }
+        return p._hay;
+      }
+
+      function matches(p) {
+        if (state.cat !== 'all' && p.category !== state.cat) return false;
+        if (state.sub && p.sub !== state.sub) return false;
+        if (state.brand && p.brands.indexOf(state.brand) === -1) return false;
+        if (!state.q) return true;
+        var raw = state.q.trim().toUpperCase();
+        var n = norm(raw);
+        haystack(p);
+        if (n && p._hay.indexOf(n) !== -1) return true;
+        return raw.split(/\s+/).every(function (t) { return p._words.indexOf(t) !== -1; });
+      }
+
+      function card(p) {
+        var img = p.image
+          ? '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + '" loading="lazy">'
+          : '';
+        return '<div class="col-12 col-sm-6 col-xl-4 mb-4">' +
+          '<article class="p-card" data-code="' + esc(p.code) + '">' +
+          '<div class="p-img">' + img + '</div>' +
+          '<div class="p-body">' +
+          '<div class="p-eyebrow">' + esc(p.sub) + '</div>' +
+          '<h3 class="p-type">' + esc(p.type) + '</h3>' +
+          '<p class="p-fit">' + esc(p.fitment || '—') + '</p>' +
+          '<div class="p-foot">' +
+          '<span class="p-code">' + esc(p.code) + '</span>' +
+          (p.crossCount ? '<span class="p-cross">' + p.crossCount + ' OEM refs</span>' : '') +
+          '</div></div></article></div>';
+      }
+
+      function renderGrid() {
+        var list = DATA.products.filter(matches);
+        el.grid.innerHTML = list.map(card).join('');
+        el.empty.style.display = list.length ? 'none' : 'block';
+        el.shown.textContent = list.length;
+      }
+
+      function renderCats() {
+        var html = '<li><button data-cat="all" class="' + (state.cat === 'all' ? 'on' : '') + '">' +
+          '<span>All products</span><span class="n">' + DATA.products.length + '</span></button></li>';
+        DATA.categories.forEach(function (c) {
+          var open = state.cat === c.id;
+          html += '<li><button data-cat="' + esc(c.id) + '" class="' + (open && !state.sub ? 'on' : '') + '">' +
+            '<span>' + esc(c.name) + '</span><span class="n">' + c.count + '</span></button>';
+          if (open) {
+            html += '<ul class="sub-list">' + c.subs.map(function (s) {
+              return '<li><button data-cat="' + esc(c.id) + '" data-sub="' + esc(s.name) + '" class="' +
+                (state.sub === s.name ? 'on' : '') + '"><span>' + esc(s.name) +
+                '</span><span class="n">' + s.count + '</span></button></li>';
+            }).join('') + '</ul>';
+          }
+          html += '</li>';
+        });
+        el.catList.innerHTML = html;
+      }
+
+      function renderBrands() {
+        var counts = {};
+        DATA.products.forEach(function (p) {
+          if (state.cat !== 'all' && p.category !== state.cat) return;
+          if (state.sub && p.sub !== state.sub) return;
+          p.brands.forEach(function (b) { counts[b] = (counts[b] || 0) + 1; });
+        });
+        var names = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; });
+        if (state.brand && names.indexOf(state.brand) === -1) state.brand = null;
+        el.brandRow.innerHTML = names.length
+          ? '<button class="chip ' + (state.brand ? '' : 'on') + '" data-brand="">All makes</button>' +
+            names.map(function (b) {
+              return '<button class="chip ' + (state.brand === b ? 'on' : '') + '" data-brand="' + esc(b) + '">' +
+                esc(b) + ' <span style="opacity:.55">' + counts[b] + '</span></button>';
+            }).join('')
+          : '';
+      }
+
+      function renderAll() {
+        renderCats();
+        renderBrands();
+        renderGrid();
+      }
+
+      function openModal(code) {
+        var p = DATA.products.find(function (x) { return x.code === code; });
+        if (!p) return;
+        var img = p.image ? '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + '">' : '';
+        var rows =
+          '<div class="ov-row"><span class="k">Robust code</span><span class="v ov-code">' + esc(p.code) + '</span></div>' +
+          '<div class="ov-row"><span class="k">Category</span><span class="v">' + esc(p.categoryName) + ' / ' + esc(p.sub) + '</span></div>' +
+          (p.brands.length ? '<div class="ov-row"><span class="k">Makes</span><span class="v">' + esc(p.brands.join(', ')) + '</span></div>' : '') +
+          (p.fitment ? '<div class="ov-row"><span class="k">Fitment</span><span class="v">' + esc(p.fitment) + '</span></div>' : '');
+        var cross = p.crosses.length
+          ? '<div class="cross-box"><p class="side-title">OEM cross references (' + p.crossCount + ')</p>' +
+            '<div class="cross-list">' + p.crosses.map(function (c) { return '<span>' + esc(c) + '</span>'; }).join('') + '</div></div>'
+          : '';
+        el.ovBody.innerHTML =
+          '<div class="ov-img">' + img + '</div>' +
+          '<div class="ov-info">' +
+          '<div class="p-eyebrow">' + esc(p.sub) + '</div>' +
+          '<h3>' + esc(p.type) + '</h3>' +
+          '<div class="ov-fit">' + esc(p.fitment || '') + '</div>' +
+          (p.blurb ? '<div class="ov-blurb">' + esc(p.blurb) + '</div>' : '') +
+          rows + cross +
+          '<a class="ov-cta" href="contact.html">Request a quote</a>' +
+          '</div>';
+        el.ov.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        el.ov.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      el.catList.addEventListener('click', function (e) {
+        var b = e.target.closest('button');
+        if (!b) return;
+        var cat = b.getAttribute('data-cat');
+        var sub = b.getAttribute('data-sub');
+        if (sub) {
+          state.sub = state.sub === sub ? null : sub;
+          state.cat = cat;
+        } else {
+          state.cat = cat;
+          state.sub = null;
+        }
+        renderAll();
       });
 
-      container.innerHTML = html;
-    }
+      el.brandRow.addEventListener('click', function (e) {
+        var b = e.target.closest('button');
+        if (!b) return;
+        state.brand = b.getAttribute('data-brand') || null;
+        renderBrands();
+        renderGrid();
+      });
 
-    // Load products when page loads
-    window.addEventListener('DOMContentLoaded', function() {
-      displayProducts(productsData.categories);
-    });
+      el.grid.addEventListener('click', function (e) {
+        var c = e.target.closest('.p-card');
+        if (c) openModal(c.getAttribute('data-code'));
+      });
+
+      var t;
+      el.q.addEventListener('input', function () {
+        clearTimeout(t);
+        el.qClear.style.display = el.q.value ? 'block' : 'none';
+        t = setTimeout(function () {
+          state.q = el.q.value;
+          renderGrid();
+        }, 130);
+      });
+      el.qClear.addEventListener('click', function () {
+        el.q.value = '';
+        state.q = '';
+        el.qClear.style.display = 'none';
+        renderGrid();
+      });
+
+      el.ovClose.addEventListener('click', closeModal);
+      el.ov.addEventListener('click', function (e) { if (e.target === el.ov) closeModal(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+      el.sideToggle.addEventListener('click', function () { el.sidePanel.classList.toggle('open'); });
+
+      fetch('assets/data/products.json')
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          DATA = d;
+          var crossTotal = d.products.reduce(function (a, p) { return a + p.crossCount; }, 0);
+          document.getElementById('statTotal').textContent = d.products.length;
+          document.getElementById('statCats').textContent = d.categories.length;
+          document.getElementById('statCross').textContent = crossTotal.toLocaleString('en-US');
+          el.total.textContent = d.products.length;
+          renderAll();
+        })
+        .catch(function () {
+          el.grid.innerHTML = '';
+          el.empty.style.display = 'block';
+          el.empty.innerHTML = '<b>Catalogue could not be loaded</b>Please refresh the page.';
+        });
+    })();
   </script>
+
 </body>
-
 </html>
-
-
-
-
-
-
-
-
