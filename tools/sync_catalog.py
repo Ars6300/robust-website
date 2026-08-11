@@ -34,7 +34,7 @@ IMAGE_INDEX = {
     "RB0273305": 3, "RB0273307": 2, "RB0273308": 1, "RB0273309": 1, "RB0273311": 2,
     "RB0273312": 2, "RB0273313": 2, "RB0273315": 2, "RB0273320": 2, "RB0273325": 2,
     "RB425LS": 1, "RB430LI": 1, "RB433LS": 2, "RB441W": 3, "RB4857L": 3,
-    "RB486L": 3, "RB690LI": 1, "RB961LS": 3,
+    "RB444WK": 1, "RB486L": 3, "RB690LI": 1, "RB961LS": 3,
 }
 
 CATS = {
@@ -123,6 +123,7 @@ TYPES = [
     ("Вал регулировочный суппорта", "Caliper Adjusting Shaft"),
     ("Р/к направляющих суппорта", "Caliper Guide Repair Kit"),
     ("Р/к Суппорта", "Caliper Repair Kit"),
+    ("Р/к Седла подкова", "Fifth Wheel Horseshoe Repair Kit"),
     ("Комплект рычагов суппорта", "Caliper Lever Kit"),
     ("Рычаг тормозной (трещотка) механический", "Slack Adjuster, Manual"),
     ("Рычаг тормозной (трещотка)", "Slack Adjuster"),
@@ -178,7 +179,10 @@ TOKENS = [
     (r"\bс\s+трубкой\b", "with tube"),
     (r"\bбайонетный\b", "bayonet"),
     (r"\bполиуретановый\b", "polyurethane"),
-    (r"\bпластик\s*/\s*метал+\b", "plastic/metal"),
+    (r"\bпластик\s*/\s*метал+\w*\b", "plastic/metal"),
+    (r"\bметал+\w*\s*/\s*пластик\b", "metal/plastic"),
+    (r"\bсоставная\b", "two-piece"),
+    (r"\bс\s+болтами\b", "with bolts"),
     (r"\bпластик\b", "plastic"),
     (r"\bметал+\b", "metal"),
     (r"\bлатунь\b", "brass"),

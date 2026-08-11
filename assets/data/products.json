@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-10",
- "total": 182,
+ "generated": "2026-08-11",
+ "total": 184,
  "categories": [
   {
    "id": "brakes",
@@ -108,11 +108,11 @@
   {
    "id": "chassis",
    "name": "Chassis & Coupling",
-   "count": 1,
+   "count": 3,
    "subs": [
     {
      "name": "Fifth Wheel",
-     "count": 1
+     "count": 3
     }
    ]
   }
@@ -201,7 +201,7 @@
     "MBR5068"
    ],
    "crossCount": 23,
-   "image": "assets/products/rb54262mn.webp?v=d10b1384"
+   "image": "assets/products/rb54262mn.webp?v=f4ed3420"
   },
   {
    "code": "RB57169MN",
@@ -584,7 +584,7 @@
     "85103803"
    ],
    "crossCount": 13,
-   "image": "assets/products/rb354327vo.webp?v=3e91b994"
+   "image": "assets/products/rb354327vo.webp?v=e85a808d"
   },
   {
    "code": "RB29228PRO",
@@ -784,7 +784,7 @@
     "1178243"
    ],
    "crossCount": 15,
-   "image": "assets/products/rb29328pro.webp?v=65db9a58"
+   "image": "assets/products/rb29328pro.webp?v=7096cfd7"
   },
   {
    "code": "RB29162PRO",
@@ -871,7 +871,7 @@
     "SD01002-2H20P"
    ],
    "crossCount": 7,
-   "image": "assets/products/rb275696.webp?v=b9c561b7"
+   "image": "assets/products/rb275696.webp?v=e8e64a89"
   },
   {
    "code": "RB275695",
@@ -2984,7 +2984,7 @@
     "217821"
    ],
    "crossCount": 7,
-   "image": "assets/products/rb444wk.webp?v=a182da2d"
+   "image": "assets/products/rb444wk.webp?v=5d5fe17c"
   },
   {
    "code": "RB443WK",
@@ -5194,6 +5194,57 @@
    "image": "assets/products/rb47632.webp?v=41f61ba8"
   },
   {
+   "code": "RB94687",
+   "name": "Fifth Wheel Horseshoe Repair Kit — Jost/JSK37CW-37EW/two-piece metal/plastic 4 holes with bolts DAF, Volvo, RVI",
+   "type": "Fifth Wheel Horseshoe Repair Kit",
+   "fitment": "Jost/JSK37CW-37EW/two-piece metal/plastic 4 holes with bolts DAF, Volvo, RVI",
+   "nameRu": "Р/к Седла подкова Jost/JSK37CW-37EW/составная металл/пластик 4 отв с болтами DAF, VOLVO, RVI",
+   "category": "chassis",
+   "categoryName": "Chassis & Coupling",
+   "sub": "Fifth Wheel",
+   "brands": [
+    "DAF",
+    "Volvo",
+    "Renault"
+   ],
+   "blurb": "Coupling hardware machined to take the full drawbar and vertical load of the trailer.",
+   "crosses": [
+    "15232SEM",
+    "15232",
+    "SK310594",
+    "SK310593",
+    "SK310592",
+    "BGS278"
+   ],
+   "crossCount": 6,
+   "image": "assets/products/rb94687.webp?v=b3f7d2b3"
+  },
+  {
+   "code": "RB97284",
+   "name": "Fifth Wheel King Pin — (with bolts) 2\"/10 bolt-on top, 8 holes",
+   "type": "Fifth Wheel King Pin",
+   "fitment": "(with bolts) 2\"/10 bolt-on top, 8 holes",
+   "nameRu": "Палец сцепного устройства (с болтами) 2\"/10 болт сверху, 8 отверстий",
+   "category": "chassis",
+   "categoryName": "Chassis & Coupling",
+   "sub": "Fifth Wheel",
+   "brands": [],
+   "blurb": "Machined coupling pin carrying the full vertical and drawbar load between tractor and trailer.",
+   "crosses": [
+    "RB123957",
+    "94101",
+    "15219SEM",
+    "KZ1012-01",
+    "1136SEM",
+    "Kz1012-08",
+    "KZ101201",
+    "B14201135",
+    "88070"
+   ],
+   "crossCount": 9,
+   "image": "assets/products/rb97284.webp?v=0c86c05c"
+  },
+  {
    "code": "RB123957",
    "name": "Fifth Wheel King Pin — (without bolts) 2\"/10 bolt-on top, 8 holes",
    "type": "Fifth Wheel King Pin",
@@ -5205,6 +5256,7 @@
    "brands": [],
    "blurb": "Machined coupling pin carrying the full vertical and drawbar load between tractor and trailer.",
    "crosses": [
+    "RB97284",
     "15218SEM",
     "KZ1012-01",
     "662 101 109K",
@@ -5215,7 +5267,7 @@
     "KZ101201",
     "B14201135"
    ],
-   "crossCount": 9,
+   "crossCount": 10,
    "image": "assets/products/rb123957.webp?v=ae97a871"
   }
  ]
